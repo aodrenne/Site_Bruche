@@ -1,0 +1,8 @@
+streamlit
+streamlit-drawable-canvas
+plotly
+pydeck
+geopandas
+pandas
+pathlib
+unicodedata
