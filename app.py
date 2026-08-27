@@ -140,6 +140,10 @@ points_gdf = load_points()
 if "basemap_select" not in st.session_state:
     st.session_state["basemap_select"] = list(BASEMAPS.keys())[0]
 
+# --- Popup d'accueil : n'apparaît qu'une seule fois par session ---
+if "popup_accueil_vu" not in st.session_state:
+    st.session_state["popup_accueil_vu"] = False
+
  
 # --------- Sidebar gauche -------------------#
 with st.sidebar:
@@ -722,8 +726,6 @@ def show_point_popup(obj):
     st.write(f"**Historique :** {obj.get('Histoire', '–')}")
 
  
-import os
-
 @st.dialog(" ")
 def show_commune_popup(props):
     blason = str(props.get("BLASON", "")).strip()
@@ -752,6 +754,23 @@ def show_commune_popup(props):
     st.write(f"**Nombre d'habitants :** {props['POPULATION']}")
     st.write(f"**Code postal :** {props['CODE_POST']}")
     st.write(f"**Nombre de bâtiments recensés :** {props['BATIMENT']}")
+
+
+# --- Popup d'accueil (dialog + fonction de fermeture) ---
+@st.dialog("Bienvenue")
+def show_intro_popup():
+    st.write("test")
+    # -> tu remplaces ce contenu par ce que tu veux (texte, images, liens...)
+
+    if st.button("Fermer", key="fermer_intro"):
+        st.session_state["popup_accueil_vu"] = True
+        st.rerun()
+
+
+# On déclenche le popup d'accueil avant tout le reste, tant qu'il n'a pas été fermé
+if not st.session_state["popup_accueil_vu"]:
+    show_intro_popup()
+
  
 with st.container(key="basemap_select_container"):
     st.selectbox(
@@ -760,14 +779,6 @@ with st.container(key="basemap_select_container"):
         key="basemap_select",
     )
 
-@st.dialog("TEST")
-def show_intro_popup():
-    st.write("test")
-    # -> tu remplaces ce contenu par ce que tu veux
-
-    if st.button("Fermer", key="fermer_intro"):
-        st.session_state["popup_accueil_vu"] = True
-        st.rerun()
  
 # -------------- CSS -------------------#
 st.markdown(
