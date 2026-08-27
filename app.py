@@ -870,64 +870,7 @@ st.markdown(
             height: 20px !important;
             z-index: 999 !important;
         }
-        #intro-overlay.hidden{opacity:0; visibility:hidden; pointer-events:none;}
-        #intro-box{
-            width:min(520px, 88%);
-            background:var(--panel-glass-strong);
-            border:1px solid var(--panel-border);
-            border-radius:var(--radius);
-            padding:34px 32px 26px;
-            backdrop-filter: blur(10px);
-            text-align:center;
-            box-shadow:0 20px 60px rgba(0,0,0,0.5);
-        }
-        #intro-box h1{
-            font-family:'Fraunces', serif;
-            font-size:28px;
-            font-weight:600;
-            margin:0 0 14px;
-            line-height:1.25;
-        }
-        #intro-box p{
-            font-size:14.5px;
-            line-height:1.65;
-            color:var(--text-muted);
-            margin:0 0 26px;
-        }
-        #intro-dismiss{
-            display:inline-flex;
-            align-items:center;
-            gap:8px;
-            background:var(--accent-gold);
-            color:#1b1608;
-            border:none;
-            padding:11px 26px;
-            border-radius:999px;
-            font-family:'Inter',sans-serif;
-            font-weight:600;
-            font-size:13.5px;
-            letter-spacing:.02em;
-            cursor:pointer;
-            transition:transform .15s ease, box-shadow .15s ease;
-        }
-        #intro-dismiss:hover{transform:translateY(-1px); box-shadow:0 8px 22px rgba(201,162,75,0.35);}
- 
         
-        <div id="stage">
-            <div id="map"></div>
-
-            <!-- Popup d'introduction -->
-        <div id="intro-overlay">
-             <div id="intro-box">
-            <span class="eyebrow">Regard sur l'histoire</span>
-            <h1>L'histoire du patrimoine de la vallée de la Bruche</h1>
-            <p>
-            Le territoire de la vallée de la Bruche possède un patrimoine singulier en raison de son histoire et de sa situation aux frontières de différents territoires aux cultures diverses. Chacun des bâtiments présentés est visible sur la carte dynamique, n'hésitez pas à fouiller !
-            </p>
-            <button id="intro-dismiss">Commencer le voyage ↓</button>
-            </div>
-        </div>
- 
     </style>
     """,
     unsafe_allow_html=True,
