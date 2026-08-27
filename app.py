@@ -768,6 +768,15 @@ with st.container(key="basemap_select_container"):
         options=list(BASEMAPS.keys()),
         key="basemap_select",
     )
+
+@st.dialog("TEST")
+def show_intro_popup():
+    st.write("test")
+    # -> tu remplaces ce contenu par ce que tu veux
+
+    if st.button("Fermer", key="fermer_intro"):
+        st.session_state["popup_accueil_vu"] = True
+        st.rerun()
  
 # -------------- CSS -------------------#
 st.markdown(
@@ -962,3 +971,6 @@ elif commune_hits:
         st.session_state["sel_source"] = "bar"
         st.rerun()
     show_commune_popup(props)
+
+if not st.session_state["popup_accueil_vu"]:
+    show_intro_popup()
