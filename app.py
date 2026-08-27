@@ -7,6 +7,7 @@ import plotly.graph_objects as go
 import pydeck as pdk
 import streamlit as st
 import unicodedata
+import os 
  
 st.set_page_config(page_title="Maquette", layout="wide", initial_sidebar_state="expanded")
  
@@ -694,7 +695,6 @@ deck = pdk.Deck(
  
  
 # -------------------- Popup --------------#
-import os # Ajoute 'import os' en haut de ton fichier si ce n'est pas déjà fait
 
 @st.dialog(" ", width="small")
 def show_point_popup(obj):
@@ -702,21 +702,12 @@ def show_point_popup(obj):
     
     if photo and str(photo).lower() != "nan":
         photo_name = str(photo).strip()
-        
-        # --- NOUVELLE LOGIQUE DE CORRECTION DU NOM ---
-        # On récupère le nom sans extension et l'extension actuelle s'il y en a une
+    
         name, ext = os.path.splitext(photo_name)
         
-        # Si aucune extension n'est trouvée (ex: 'IM67012758'), on force '.jpg'
         if not ext:
             photo_name = name + ".jpg"
-        
-        # --- FIN DE LA NOUVELLE LOGIQUE ---
-        
-        # URL directe Hugging Face avec le nom corrigé
         photo_url = f"https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/{photo_name}"
-        
-        # Affichage de l'image
         try:
             # On garde use_container_width=True pour que ce soit beau
             st.image(photo_url, use_container_width=True)
@@ -971,6 +962,3 @@ elif commune_hits:
         st.session_state["sel_source"] = "bar"
         st.rerun()
     show_commune_popup(props)
-
-if not st.session_state["popup_accueil_vu"]:
-    show_intro_popup()
