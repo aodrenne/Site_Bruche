@@ -884,7 +884,7 @@ st.markdown(
 
         div[data-testid="stDialog"] div[role="dialog"] {
             background-color: #FFFAF5 !important;
-            color: #751F0F !important;
+            color: #f3ecdf !important;
             border-radius: 10px !important;
         }
 
