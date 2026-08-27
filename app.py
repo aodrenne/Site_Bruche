@@ -168,7 +168,7 @@ with st.sidebar:
  
     # ----- Partie 1 : Filtrage par typologie -----------------
     st.write("---")
-    st.markdown("### Filtrage par typologie")
+    st.markdown("### Filtrage par typologies")
     with st.expander("Sélectionner une typologie...", expanded=False):
  
         df_arbre_typo = pd.DataFrame(index=points_gdf.index)
@@ -311,7 +311,7 @@ with st.sidebar:
  
     # ----- Partie 2 : Datation --------------------------------#
     st.write("---")
-    st.markdown("### Filtrage par datation")
+    st.markdown("### Filtrage par datations")
     with st.expander("Sélectionner la période...", expanded=False):
  
         df_arbre_chrono = pd.DataFrame(index=points_gdf.index)
