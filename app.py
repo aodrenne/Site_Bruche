@@ -915,18 +915,18 @@ with col_right:
             st.rerun()
 
     # Graphique en barre communes 
-    st.markdown("<p class='sous-titre-graph'>Répartition par communes</p>", unsafe_allow_html=True)
+    st.markdown("<p class='sous-titre-graph'>Répartition par commune</p>", unsafe_allow_html=True)
     event_bar = st.plotly_chart(fig_bar, use_container_width=True, on_select="rerun", key="bar")
 
     # Donut 1 : Typologie (groupe_1) — évolue avec les points affichés
-    st.markdown("<p class='sous-titre-graph'>Répartition par typologies</p>", unsafe_allow_html=True)
+    st.markdown("<p class='sous-titre-graph'>Répartition par typologie</p>", unsafe_allow_html=True)
     if not comptage_typo.empty:
         st.plotly_chart(fig_donut_typo, use_container_width=True, key="donut_typo")
     else:
         st.info("Aucune typologie renseignée pour la sélection actuelle.")
 
     # Donut 2 : Chronologie (Siecle_1) — évolue avec les points affichés
-    st.markdown("<p class='sous-titre-graph'>Répartition par périodes</p>", unsafe_allow_html=True)
+    st.markdown("<p class='sous-titre-graph'>Répartition par période</p>", unsafe_allow_html=True)
     if not comptage_chrono.empty:
         st.plotly_chart(fig_donut_chrono, use_container_width=True, key="donut_chrono")
     else:
