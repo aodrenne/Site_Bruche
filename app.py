@@ -760,12 +760,6 @@ def show_commune_popup(props):
 @st.dialog("A propos de cette cartographie")
 def show_intro_popup():
     st.write("Cette cartographie a été réalisée grâce à la mobilisation des données du service de l'Inventaire recensées majoritairement entre 2002 et 2004 par les chercheurs Fritsch E, Haegel O, Paillard E, Buchheit M.L, Parent B, Raimbaut J, Fritsch F, Brangé J, Graetz F et Henry J.Y. Les photographies elles sont réalisées par les chercheurs mais également par Menninger C.")
-    # -> tu remplaces ce contenu par ce que tu veux (texte, images, liens...)
-
-    if st.button("Fermer", key="fermer_intro"):
-        st.session_state["popup_accueil_vu"] = True
-        st.rerun()
-
 
 # On déclenche le popup d'accueil avant tout le reste, tant qu'il n'a pas été fermé
 if not st.session_state["popup_accueil_vu"]:
