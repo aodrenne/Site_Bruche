@@ -875,6 +875,22 @@ st.markdown(
             height: 20px !important;
             z-index: 999 !important;
         }
+
+        div[data-testid="stDialog"] {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        div[data-testid="stDialog"] div[role="dialog"] {
+            background-color: #FFFAF5 !important;
+            color: #751F0F !important;
+            border-radius: 10px !important;
+        }
+
+        div[data-testid="stDialog"] div[role="dialog"] * {
+            color: #751F0F !important;
+        }
         
     </style>
     """,
