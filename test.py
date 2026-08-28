@@ -32,7 +32,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-STORY_HEIGHT = 900  # valeur de secours ; l'iframe est ensuite forcée en 100vh via le CSS ci-dessus
+STORY_HEIGHT = 900 
 
 STORY_HTML = r"""
 <!DOCTYPE html>
@@ -40,8 +40,7 @@ STORY_HTML = r"""
 <head>
 <meta charset="UTF-8" />
 
-<!-- CSS Leaflet : INDISPENSABLE, sans lui les tuiles s'empilent au lieu
-     de former une grille propre (c'était la cause du bug d'affichage). -->
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 <style>
@@ -237,8 +236,8 @@ STORY_HTML = r"""
   .float-diapo.visible{opacity:1; transform:translateY(0); pointer-events:auto;}
   .diapo-frame{
     position:relative;
-    width:280px;   /* valeur de secours tant que JS n'a pas mesuré la 1re photo */
-    height:280px;  /* valeur de secours */
+    width:280px;   
+    height:280px;  
     max-width:36vw;
     max-height:60vh;
     border-radius:10px;
@@ -420,12 +419,12 @@ STORY_HTML = r"""
       text: "L'industrie textile à été très importante pour le développement de la vallée. La première filature de coton ouvre en 1795 à Schirmeck puis, au XIXe siècle, des industriels s'installent dans la vallée et construisent des usines de textiles mais aussi de plus modestes filatures voient le jour en premier lieu. Cette industrie fleuri ici, car la main d'oeuvre est nombreuse et peu chère en comparaison des localités voisines. Le cours d'eau de la Bruche favorise l'exploitation du coton, très évergivore. en 1870, 9 établissements emploient 1720 métiers, en 1907, 70% des ouvriers travaillent pour ces usines (8500 métiers à tisser). C'est aussi le lieu de nombreuses revendications ouvrières. La mécanisation du travail avait permis aux femmes et aux enfants de travailler, grâce à ces revendications en 1840 les horaires des enfants sont recadrés avec : 8h / jour entre 8 à 12 ans et 12h / jour pour ceux de 12 à 16 ans. A la fin du XXe siècle, l'industrie est en déclin et la dernière usine ferme en 1981. La concurrence asiatique et la perte des colonies françaises qui représentaient un tiers des exportations expliquent la fin de cette industrie dans la vallée. Encore aujourd'hui, il reste de nombreuses marques de cette époque. Certaines usines sont abandonnées, les maisons des industriels ayant fait fortune dans la vallée sont également présentes dans les villages, tout comme des enclos funéraires appartenant aux familles d'industriels.",
       layout: "diapo-bottom-right",
       photos: [
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012122.jpg", caption: "Ancienne filature de coton Claude Frères, puis filature de Wasselone de Neuviller-la-Roche"},
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012886.jpg", caption: "Ancienne usine de tissage et filature Thormann de Plaine"},
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012123.jpg", caption: "Ancien tissage de coton Pramberger, puis filature Jacquel de Neuviller-le-Roche"},
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012882.jpg", caption: "Ancienne usine de tissage Rey, puis Thormann-Dutruel de Plaine" },
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012721.jpg", caption: "Immeuble de logements ouvriers"},
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013299.jpg", caption: "Enclos funéraire de la famille d'industriels Heywood-Seillière de La Broque"}
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012122.jpg", caption: "Ancienne filature de coton Claude Frères, puis filature de Wasselone de Neuviller-la-Roche (Menninger C)"},
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012886.jpg", caption: "Ancienne usine de tissage et filature Thormann de Plaine (Fritsch F et Haegel O)"},
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012123.jpg", caption: "Ancien tissage de coton Pramberger, puis filature Jacquel de Neuviller-le-Roche (Menninger C)"},
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012882.jpg", caption: "Ancienne usine de tissage Rey, puis Thormann-Dutruel de Plaine (Fritsch F et Haegel O)" },
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012721.jpg", caption: "Immeuble de logements ouvriers (Menninger C)"},
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013299.jpg", caption: "Enclos funéraire de la famille d'industriels Heywood-Seillière de La Broque (Fritsch F et Haegel O)"}
         ]
     },
 
@@ -438,13 +437,13 @@ STORY_HTML = r"""
       text: "L'histoire religieuse de la vallée est riche. Son identité s'est forgée avec la présence de différents territoires à ses frontières. Dans ce cadre, chacun des territoires dont elle était composée a évolué différemment d'un point de vue religieux. La tour coeur de Fouday est l'un des seuls témoins de l'architecture religieuse médiévale. Le territoire de Ban-de-la-Roche est de confession protestante symbolisée par la présence de J.-F Oberlin, pasteur connu pour son élévation du territoire et plus globalement son apport pour de nombreux domaines tel que l'éducation périscolaire. Un musée est présent à Waldersbach pour présenter son oeuvre. Concernant les autres confessions, une petite communauté ménonnite s'est réfugiée dans le comté de Salm après son expulsion de l'Alsace. Le judaïsme est également présent dans la vallée dont la seule synagogue se situe à Schirmeck. Le catholicisme et le protestantisme sont les deux confessions majoritaires, lieus de culte sont présents dans chaque village où les deux églises peuvent cohexiter.",
       layout: "diapo-bottom-right",
       photos: [
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013097.jpg", caption: "Eglise Saint-Jean-Baptiste de Fouday"},
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013088.jpg", caption: "Temple luthérien de Rothau" },
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013085.jpg", caption: "Eglise Notre-Dame-de-Bon-Secours de La Broque"},
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013057.jpg", caption: "Eglise paroissiale de Schirmeck"},
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013058.jpg", caption: "Synagogue de Schirmeck"},
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67011248.jpg", caption: "Chapelle Notre-Dame-de-Bon-Secours de Lutzelhouse"},
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67011289.jpg", caption: "Chapelle funéraire de la famille d'industriels Muller à Muhlbach-sur-Bruche"}
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013097.jpg", caption: "Eglise Saint-Jean-Baptiste de Fouday (Fritsch F et Haegel O)"},
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013088.jpg", caption: "Temple luthérien de Rothau (Menninger C)" },
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013085.jpg", caption: "Eglise Notre-Dame-de-Bon-Secours de La Broque (Fritsch F et Haegel O)"},
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013057.jpg", caption: "Eglise paroissiale de Schirmeck (Fritsch F et Haegel O)"},
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013058.jpg", caption: "Synagogue de Schirmeck (Fritsch F et Haegel O)"},
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67011248.jpg", caption: "Chapelle Notre-Dame-de-Bon-Secours de Lutzelhouse (Parent B et Fritsch E)"},
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67011289.jpg", caption: "Chapelle funéraire de la famille d'industriels Muller à Muhlbach-sur-Bruche (Erfurth J)"}
       ]
     },
 
@@ -457,9 +456,9 @@ STORY_HTML = r"""
       text: "La localisation de la vallée à l'est de la France la positionne en proie aux conflits internationnaux par son intervention mais aussi par le déploiement de la guerre sur ce territoire. La Guerre de Trente ans (1618-1648) a dans la vallée causée la disparition et la mort de plus de 70% de sa population. Ensuite, la première et la Seconde guerre mondiale ont également causés de nombreux dommages humains. La Seconde guerre mondiale a marqué le territoire avec la construction du camps de concentration du Struthof dans les hauteurs de la commune de Natzwiller. La vallée est encore aujourd'hui associée à cette époque dans les mémoires mais aussi dans la matérialité avec la mise en place de visites mémorielles du camps mais aussi du mémoriel d'Alsace-Moselle décrivant cette période.",
       layout: "diapo-bottom-right",
       photos: [
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013276.jpg", caption: "Monument commémoratif de la flamme du souvenir à Natzwiller" },
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013276.jpg", caption: "Monument commémoratif de la flamme du souvenir à Natzwiller (Fritsch F et Haegel O)" },
         { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/memoriel.jpg", caption: "Mémoriel d'Alsace-Lorraine à Schirmeck" },
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013364.jpg", caption: "Champ de bataille de 1914 au petit Donon dans la commune de Wisches" }
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013364.jpg", caption: "Champ de bataille de 1914 au petit Donon dans la commune de Wisches (Fritsch F et Haegel O)" }
       ]
     },
         {
@@ -471,12 +470,12 @@ STORY_HTML = r"""
       text: "L'histoire de la vallée est riche et marquée par une certaine instabilité économiques et sociales. Les habitants du territoire ont connu de grands épisodes de crises économiques et sociale. L'agriculture a toujours été présente, sous différentes formes. Les terres ne sont pas très fertiles mais des parcelles agricoles sont présentes en fond de vallée pour nourrir les habitants. La sylviculture est une industrie qui s'est développée dès le Moyen Age jusqu'à atteindre 250 scieries en 1900 dans la vallée. Cela permettrait notamment de marchander avec les territoires voisins. Aujourd'hui, cette industrie a un rôle important pour l'économie de la vallée, notamment avec la présence de la plus grande scierie de résineux d'Europe. Ce travail des ressources marque ainsi le paysage du territoire, les habitats sont en grande majorité des fermes, typiques de la région avec des grandes portes, parfois une architecture monobloc qui se répartissent de manière homogène notamment dans le sud de la vallée.",
       layout: "diapo-bottom-right",
       photos: [
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012801.jpg", caption: "Ferme monobloc de Saint-Blaise-la-Roche" },
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012785.jpg", caption: "Ferme monobloc de Colroy-la-Roche" },
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012820.jpg", caption: "Ferme monobloc de Ranrupt" },
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013170.jpg", caption: "Ferme de Belmont" },
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013382.jpg", caption: "Maison forestière de Granfontaine" },
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/Scierie.jpg", caption: "Scierie de Urmatt" }
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012801.jpg", caption: "Ferme monobloc de Saint-Blaise-la-Roche (Fritsch F et Haegel O)" },
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012785.jpg", caption: "Ferme monobloc de Colroy-la-Roche (Fritsch F et Haegel O)" },
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012820.jpg", caption: "Ferme monobloc de Ranrupt (Fritsch F et Haegel O)" },
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013170.jpg", caption: "Ferme de Belmont (Fritsch F et Haegel O)" },
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013382.jpg", caption: "Maison forestière de Granfontaine (Fritsch F et Haegel O)" },
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/Scierie.jpg", caption: "Scierie de Urmatt " }
       ]
     }, 
 
@@ -489,19 +488,19 @@ STORY_HTML = r"""
       text: "Certains bâtiments ne rentrent pas forcément dans les thèmes précédents pourtant, ce patrimoine mérite d'être connu dans la vallée pour son esthétique et son cachet",
       layout: "diapo-bottom-right",
       photos: [
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013403.jpg", caption: "Temple du Donon de Grandfontaine" },
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012888.jpg", caption: "Viaduc ferroviaire de Plaine" },
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012777.jpg", caption: "Ancien sanatorium de Schirmeck" },
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012758.jpg", caption: "Mairie de Schirmeck" },
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012755.jpg", caption: "Gare de Schirmeck-La Broque" },
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67011288.jpg", caption: "Château de Muhlbach-sur-Bruche" }
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67013403.jpg", caption: "Temple du Donon de Grandfontaine (Fritsch F et Haegel O)" },
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012888.jpg", caption: "Viaduc ferroviaire de Plaine (Menninger C)" },
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012777.jpg", caption: "Ancien sanatorium de Schirmeck (Menninger C)" },
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012758.jpg", caption: "Mairie de Schirmeck (Menninger C)" },
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67012755.jpg", caption: "Gare de Schirmeck-La Broque (Menninger C)" },
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/IM67011288.jpg", caption: "Château de Muhlbach-sur-Bruche (Parent B et Fritsch E)" }
       ]
     }, 
 
 
   ];
 
-  // ============ INITIALISATION CARTE ============
+
   const map = L.map('map', {
     zoomControl:false,
     attributionControl:false,
@@ -519,8 +518,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19
 }).addTo(map);
 
-// Force Leaflet à recalculer la taille des tuiles une fois le conteneur stabilisé
-// (utile car l'iframe Streamlit est redimensionnée après le chargement initial)
+
 window.addEventListener('load', () => {
   setTimeout(() => map.invalidateSize(), 100);
 });
@@ -552,18 +550,18 @@ fetch("https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/Shapefile/Co
   })
   .catch(err => console.error("Erreur chargement communes :", err));
 
-  // Marqueurs des villes
+
   const markers = steps.map(s => {
     const icon = L.divIcon({ className:'', html:'<div class="city-pin"></div>', iconSize:[16,16] });
     return L.marker(s.coords, { icon }).addTo(map);
   });
 
-  // Tracé pointillé entre les étapes (se dessine au fil du parcours)
+  
   const routeLine = L.polyline(steps.map(s => s.coords), {
     color:'#c9a24b', weight:2, opacity:0, className:'route-line'
   }).addTo(map);
 
-  // ============ ÉLÉMENTS DOM ============
+
   const introOverlay = document.getElementById('intro-overlay');
   const introDismiss = document.getElementById('intro-dismiss');
   const navBar = document.getElementById('nav-bar');
@@ -606,10 +604,7 @@ fetch("https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/Shapefile/Co
     panelDiapo.classList.remove('visible');
   }
 
-  // Calcule largeur ET hauteur du cadre à partir du ratio réel de la photo,
-  // en restant dans la limite de 36vw x 60vh (mêmes bornes que le CSS
-  // max-width/max-height), pour que le cadre épouse toujours exactement
-  // la photo affichée, sans bande vide ni cadre trop large.
+
   function setDiapoSizeForImage(img){
     if (!img || !img.naturalWidth || !img.naturalHeight) return;
     const maxWidth = window.innerWidth * 0.36;   // équivalent de 36vw
@@ -665,7 +660,7 @@ fetch("https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/Shapefile/Co
     diapoIndex = 0;
   }
 
-  // Recalcule la taille pour la photo active si la fenêtre est redimensionnée
+  
   window.addEventListener('resize', () => {
     const activeImg = diapoFrame.querySelector('img.active');
     if (activeImg) setDiapoSizeForImage(activeImg);
@@ -710,8 +705,6 @@ fetch("https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/Shapefile/Co
     }
   }
 
-  // Va à l'étape `idx`. Si `viaOverview` est vrai, la carte dézoome
-  // sur la France avant de rezoomer sur la nouvelle ville.
   function goToStep(idx, viaOverview){
     const step = steps[idx];
     panelText.classList.remove('visible');
