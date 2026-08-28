@@ -757,9 +757,15 @@ def show_commune_popup(props):
 
 
 # --- Popup d'accueil (dialog + fonction de fermeture) ---
-@st.dialog("A propos")
+@st.dialog(" ")
 def show_intro_popup():
-    st.write("Cette cartographie a été réalisée grâce à la mobilisation des données du service de l'Inventaire de la région Grand-Est, recensées majoritairement entre 2002 et 2004 par les chercheurs Fritsch E, Haegel O, Paillard E, Buchheit M.L, Parent B, Raimbaut J, Fritsch F, Brangé J. Les photographies elles sont réalisées par les chercheurs mais également par Menninger C.")
+    with st.container(key="intro_popup_container"):
+        st.markdown("<h1 class='intro-popup-title'>A propos</h1>", unsafe_allow_html=True)
+        st.write("Cette cartographie a été réalisée grâce à la mobilisation des données du service de l'Inventaire de la région Grand-Est, recensées majoritairement entre 2002 et 2004 par les chercheurs Fritsch E, Haegel O, Paillard E, Buchheit M.L, Parent B, Raimbaut J, Fritsch F, Brangé J. Les photographies elles sont réalisées par les chercheurs mais également par Menninger C.")
+        st.write("")
+        if st.button("Fermer", key="btn_close_intro_popup", use_container_width=True):
+            st.session_state["popup_accueil_vu"] = True
+            st.rerun()
 
 # On déclenche le popup d'accueil avant tout le reste, tant qu'il n'a pas été fermé
 if not st.session_state["popup_accueil_vu"]:
@@ -891,7 +897,23 @@ st.markdown(
         div[data-testid="stDialog"] div[role="dialog"] * {
             color: #751F0F !important;
         }
-        
+
+        /* Popup d'accueil : fond rouge dédié + titre centré */
+        div[data-testid="stDialog"] div[role="dialog"]:has(.st-key-intro_popup_container) {
+            background-color: #A32B2B !important;
+        }
+
+        div[data-testid="stDialog"] div[role="dialog"]:has(.st-key-intro_popup_container) * {
+            color: #FFF6EF !important;
+        }
+
+        .intro-popup-title {
+            text-align: center;
+            font-family: Georgia, serif;
+            font-size: 26px;
+            margin: 0 0 12px 0;
+        }
+
     </style>
     """,
     unsafe_allow_html=True,
