@@ -761,7 +761,7 @@ def show_commune_popup(props):
 def show_intro_popup():
     with st.container(key="intro_popup_container"):
         st.markdown("<h1 class='intro-popup-title'>A propos</h1>", unsafe_allow_html=True)
-        st.write("Cette cartographie a été réalisée grâce à la mobilisation des données du service de l'Inventaire de la région Grand-Est, recensées majoritairement entre 2002 et 2004 par les chercheurs Fritsch E, Haegel O, Paillard E, Buchheit M.L, Parent B, Raimbaut J, Fritsch F, Brangé J. Les photographies elles sont réalisées par les chercheurs mais également par Menninger C.")
+        st.write("Cette cartographie a été réalisée grâce à la mobilisation des données du service de l'Inventaire de la région Grand Est, recensées majoritairement entre 2002 et 2004 par les chercheurs Fritsch E, Haegel O, Paillard E, Buchheit M.L., Parent B, Raimbaut J, Fritsch F, Brangé J. Les photographies ont été réalisées par les chercheurs mais également par Menninger C.")
         st.write("")
         if st.button("Fermer", key="btn_close_intro_popup", use_container_width=True):
             st.session_state["popup_accueil_vu"] = True
