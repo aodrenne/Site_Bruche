@@ -392,7 +392,7 @@ STORY_HTML = r"""
       text: "La vallée de la Bruche était divisée en quatre territoires : la principauté de Salm-Salm, le bailliage épiscopal de Schirmeck, le comté du Ban de la Roche et la seigneurie de Villé. Pourtant, les habitants vivent ensemble les essors et les épisodes de crises qui surgissent dans la vallée.",
       layout: "diapo-bottom-right",
       photos: [
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/Carte_avant1789.jpg", caption: "Audrey Schneider, 2005" }
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/Carte_avant1789.jpg", caption: "Schneider A, 2005" }
       ]
     },
 
@@ -406,7 +406,7 @@ STORY_HTML = r"""
       layout: "diapo-bottom-right",
       photos: [
         { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/Mine_Granfontaine.jpg", caption: "Mine de Grandfontaine, (valleedelabruche.fr)" },
-        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/Mine_Grandfontaine.jpg", caption: "Galerie d'évacuation d'eau de la mine (Mathile Cybulski)" }
+        { src: "https://huggingface.co/datasets/AodRic/Data_SIP/resolve/main/static/Mine_Grandfontaine.jpg", caption: "Galerie d'évacuation d'eau de la mine (Cybulski M)" }
       ]
     },
 
