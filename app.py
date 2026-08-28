@@ -759,7 +759,7 @@ def show_commune_popup(props):
 # --- Popup d'accueil (dialog + fonction de fermeture) ---
 @st.dialog("A propos")
 def show_intro_popup():
-    st.write("Cette cartographie a été réalisée grâce à la mobilisation des données du service de l'Inventaire, recensées majoritairement entre 2002 et 2004 par les chercheurs Fritsch E, Haegel O, Paillard E, Buchheit M.L, Parent B, Raimbaut J, Fritsch F, Brangé J, Graetz F et Henry J.Y. Les photographies elles sont réalisées par les chercheurs mais également par Menninger C.")
+    st.write("Cette cartographie a été réalisée grâce à la mobilisation des données du service de l'Inventaire de la région Grand-Est, recensées majoritairement entre 2002 et 2004 par les chercheurs Fritsch E, Haegel O, Paillard E, Buchheit M.L, Parent B, Raimbaut J, Fritsch F, Brangé J. Les photographies elles sont réalisées par les chercheurs mais également par Menninger C.")
 
 # On déclenche le popup d'accueil avant tout le reste, tant qu'il n'a pas été fermé
 if not st.session_state["popup_accueil_vu"]:
@@ -883,7 +883,7 @@ st.markdown(
         }
 
         div[data-testid="stDialog"] div[role="dialog"] {
-            background-color: #FFFAF5 !important;
+            background-color: #735232 !important;
             color: #f3ecdf !important;
             border-radius: 10px !important;
         }
